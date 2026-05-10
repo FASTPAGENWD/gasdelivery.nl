@@ -1,0 +1,58 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+coverage/
+
+# next.js
+.next/
+out/
+
+# production
+build/
+dist/
+
+# misc
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.pem
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env (nooit secrets committen — alleen .env.example in repo)
+.env
+.env.*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript / tooling
+*.tsbuildinfo
+.eslintcache
+.prettiercache
+
+# IDE / editor
+.idea/
+*.swp
+*.swo
+*~
+
+# Cursor / lokale agentlogs (niet nodig in GitHub)
+.cursor/
+
+# optional: lokale OS / backup
+*.bak
+*.tmp

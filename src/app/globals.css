@@ -1,0 +1,121 @@
+@import "tailwindcss";
+@source "../**/*.{js,ts,jsx,tsx}";
+
+:root {
+  --background: #ffffff;
+  --foreground: #18181b;
+  --surface: #f4f4f5;
+  --surface-elevated: #ffffff;
+  --muted: #374151;
+  --accent: #3f3f46;
+  --accent-hover: #27272a;
+  --accent-subtle: rgba(24, 24, 27, 0.06);
+  --ring: rgba(24, 24, 27, 0.12);
+  --border: rgba(24, 24, 27, 0.1);
+  --glow: rgba(24, 24, 27, 0.06);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-subtle: var(--accent-subtle);
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.hero-art-float {
+  animation: hero-float 5.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-art-float {
+    animation: none;
+  }
+}
+
+.hero-section-bg {
+  background-color: var(--background);
+  background-image:
+    radial-gradient(ellipse 120% 80% at 70% -10%, rgba(63, 63, 70, 0.14), transparent 55%),
+    radial-gradient(ellipse 90% 60% at 10% 100%, rgba(63, 63, 70, 0.08), transparent 50%),
+    linear-gradient(to bottom, var(--background) 0%, var(--surface) 100%);
+}
+
+.hero-grid-overlay {
+  background-image:
+    linear-gradient(rgba(24, 24, 27, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 24, 27, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black 30%, transparent 95%);
+}
+
+.prose-custom {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.prose-custom h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.prose-custom h2:first-child {
+  margin-top: 0;
+}
+
+.prose-custom p {
+  margin-top: 0.75rem;
+}
+
+.prose-custom ul {
+  margin-top: 0.75rem;
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.prose-custom li {
+  margin-top: 0.35rem;
+}
+
+.prose-custom a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-custom a:hover {
+  color: var(--accent-hover);
+}
+
+.prose-custom strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
