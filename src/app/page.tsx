@@ -6,16 +6,21 @@ import { Steps } from "@/components/home/Steps";
 import { SITE_DESCRIPTION, SITE_NAME, absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Lachgas bestellen Amsterdam? Snel en eenvoudig online — 24/7 bereikbaar",
+  title: "Lachgas Amsterdam — Snel Bezorgd, 24/7 Bereikbaar | Gasdelivery.nl",
   description: SITE_DESCRIPTION,
   alternates: { canonical: absoluteUrl("/") },
   openGraph: {
-    title: `Lachgas tanks aan huis Amsterdam — 24/7 | ${SITE_NAME}`,
+    title: `Lachgas Amsterdam — 24/7 Bezorging Aan Huis | ${SITE_NAME}`,
     description: SITE_DESCRIPTION,
     url: absoluteUrl("/"),
     siteName: SITE_NAME,
     locale: "nl_NL",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Lachgas Amsterdam — 24/7 Bezorging | ${SITE_NAME}`,
+    description: SITE_DESCRIPTION,
   },
 };
 

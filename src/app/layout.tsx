@@ -25,7 +25,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — lachgas Amsterdam`,
+    default: `Lachgas Amsterdam — 24/7 Bezorging Aan Huis | ${SITE_NAME}`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
@@ -33,12 +33,16 @@ export const metadata: Metadata = {
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
+  applicationName: SITE_NAME,
+  referrer: "origin-when-cross-origin",
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       "max-image-preview": "large",
       "max-snippet": -1,
       "max-video-preview": -1,
@@ -49,18 +53,38 @@ export const metadata: Metadata = {
     locale: "nl_NL",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: `${SITE_NAME} — lachgas aan huis Amsterdam`,
+    title: `Lachgas Amsterdam — 24/7 Bezorging Aan Huis | ${SITE_NAME}`,
     description: SITE_DESCRIPTION,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} — lachgas Amsterdam`,
+    title: `Lachgas Amsterdam — 24/7 Bezorging | ${SITE_NAME}`,
     description: SITE_DESCRIPTION,
+    creator: "@gasdeliverynl",
+    site: "@gasdeliverynl",
+  },
+  alternates: {
+    canonical: SITE_URL,
+    languages: {
+      "nl-NL": SITE_URL,
+    },
   },
   category: "business",
+  classification: "Lachgas levering Amsterdam",
   formatDetection: {
     email: false,
     telephone: false,
+  },
+  other: {
+    "geo.region": "NL-NH",
+    "geo.placename": "Amsterdam",
+    "geo.position": "52.3676;4.9041",
+    ICBM: "52.3676, 4.9041",
+    "DC.title": `${SITE_NAME} — Lachgas Amsterdam`,
+    "DC.description": SITE_DESCRIPTION,
+    "DC.language": "nl",
+    "DC.coverage": "Amsterdam, Noord-Holland, Nederland",
+    "DC.subject": "lachgas amsterdam, lachgas bestellen amsterdam, lachgas bezorgen amsterdam",
   },
   ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
     ? {

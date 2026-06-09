@@ -28,26 +28,39 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `Lachgas bestellen ${s.h1Name}`;
 
   return {
-    title,
+    title: `${title} — 24/7 bezorging aan huis`,
     description: s.metaDescription,
-    keywords: [...s.keywords, "Gasdelivery", "lachgas Amsterdam"],
+    keywords: [
+      ...s.keywords,
+      "Gasdelivery",
+      "lachgas Amsterdam",
+      "lachgas aan huis bestellen",
+      "lachgas 24/7 Amsterdam",
+      "lachgas bezorging Amsterdam",
+      `lachgas tank ${s.name}`,
+    ],
     alternates: { canonical: url },
     robots: {
       index: true,
       follow: true,
-      googleBot: { index: true, follow: true },
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
     openGraph: {
       type: "website",
       locale: "nl_NL",
       url,
       siteName: SITE_NAME,
-      title: `${title} | ${SITE_NAME}`,
+      title: `${title} — 24/7 bezorging | ${SITE_NAME}`,
       description: s.metaDescription,
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} | ${SITE_NAME}`,
+      title: `${title} — 24/7 bezorging | ${SITE_NAME}`,
       description: s.metaDescription,
     },
   };

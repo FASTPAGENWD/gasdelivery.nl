@@ -4,7 +4,7 @@ import { SITE_NAME } from "@/lib/site";
 
 export const OG_SHARE_SIZE = { width: 1200, height: 630 } as const;
 
-export const OG_SHARE_ALT = `${SITE_NAME} — lachgas levering Amsterdam`;
+export const OG_SHARE_ALT = `${SITE_NAME} — Lachgas Amsterdam, 24/7 bezorging aan huis`;
 
 export function createShareImageResponse() {
   return new ImageResponse(
@@ -59,7 +59,7 @@ export function createShareImageResponse() {
             lineHeight: 1.25,
           }}
         >
-          Lachgas bestellen Amsterdam · 24/7 via WhatsApp & telefoon
+          Lachgas Amsterdam · 24/7 bezorging aan huis via WhatsApp & telefoon
         </div>
         <div
           style={{

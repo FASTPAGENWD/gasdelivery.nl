@@ -24,9 +24,9 @@ export function Steps() {
     >
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Zo werkt het</h2>
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Lachgas Amsterdam bestellen in 3 stappen</h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Drie eenvoudige stappen van bestelling tot lachgas tanks bij de deur.
+            Van bestelling tot lachgas tank aan de deur — snel, helder en zonder gedoe.
           </p>
         </div>
         <ol className="mt-14 grid gap-10 sm:grid-cols-3 sm:gap-8">

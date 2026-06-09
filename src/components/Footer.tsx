@@ -12,7 +12,7 @@ export function Footer() {
               Gasdelivery<span className="text-accent">.nl</span>
             </Link>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted">
-              Betrouwbare lachgas levering in Amsterdam aan huis of op locatie. Snel, duidelijk en persoonlijk contact.
+              Lachgas Amsterdam — betrouwbare bezorging aan huis in alle stadsdelen. Snel, duidelijk en altijd persoonlijk contact.
             </p>
           </div>
           <div>
@@ -54,9 +54,9 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-[var(--border)] pt-10">
-          <p className="text-xs font-semibold uppercase tracking-wider text-muted">Bezorggebieden en info</p>
+          <p className="text-xs font-semibold uppercase tracking-wider text-muted">Lachgas Amsterdam — Bezorggebieden</p>
           <p className="mt-2 max-w-2xl text-sm text-muted">
-            Per gebied in de gemeente Amsterdam: waar we leveren, praktische tips en wat je kunt verwachten. Kies hieronder je stadsdeel voor meer uitleg.
+            Lachgas bestellen in Amsterdam per stadsdeel: waar we leveren, praktische tips en wat je kunt verwachten. Kies hieronder je buurt.
           </p>
           <ul className="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
             {AMSTERDAM_STADSDELEN.map((s) => (

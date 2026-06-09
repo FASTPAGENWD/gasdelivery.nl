@@ -1,8 +1,8 @@
+import Image from "next/image";
 import { getShowcaseImageSrc } from "@/lib/showcase-image";
-import { ShowcaseIllustration } from "./ShowcaseIllustration";
-import { TankFramedImage } from "./TankFramedImage";
 
-const showcaseAlt = "Lachgas tank levering Amsterdam — Gasdelivery.nl";
+const showcaseAlt = "Lachgas bezorging Amsterdam — Gasdelivery.nl showcase";
+const productAlt = "Lachgas Amsterdam — FASTGAS cilinder 2 kg, thuisbezorgd door Gasdelivery.nl";
 
 const features = [
   {
@@ -63,9 +63,9 @@ export function FeatureGrid() {
     <section id="voordelen" className="scroll-mt-20 px-4 pb-6 pt-20 sm:px-6 sm:pb-8 sm:pt-24">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Waarom Gasdelivery</h2>
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Waarom kiezen voor lachgas Amsterdam via Gasdelivery</h2>
           <p className="mt-4 text-muted leading-relaxed">
-          Gebouwd rond gemak: minder bellen, minder wachten en meer zekerheid bij elke bestelling. Wij leveren lachgas van de beste kwaliteit en staan voor duidelijke afspraken, heldere communicatie en een snelle, betrouwbare levering waarop je kunt rekenen. Met een efficiënte werkwijze en klantgerichte aanpak zorgen we ervoor dat elke levering soepel en professioneel verloopt — transparant, zorgvuldig en afgestemd op jouw planning.
+            Lachgas Amsterdam bezorgen doen wij anders: minder bellen, minder wachten en meer zekerheid bij elke bestelling. Wij leveren lachgas van de beste kwaliteit in heel Amsterdam — duidelijke afspraken, heldere prijs, snelle en betrouwbare bezorging in alle stadsdelen.
           </p>
         </div>
         <ul className="mt-12 grid gap-6 sm:mt-14 sm:grid-cols-2 xl:grid-cols-4 xl:gap-6">
@@ -83,32 +83,28 @@ export function FeatureGrid() {
           ))}
         </ul>
 
-        <figure className="mt-16 sm:mt-20">
-          <div className="mx-auto w-full max-w-4xl">
-            {showcaseSrc ? (
-              <TankFramedImage src={showcaseSrc} alt={showcaseAlt} variant="feature" />
-            ) : (
-              <div className="overflow-hidden rounded-2xl border border-[var(--border)] bg-surface-elevated shadow-md sm:rounded-3xl">
-                <div className="p-4 sm:p-6">
-                  <ShowcaseIllustration className="h-auto w-full rounded-xl" />
-                </div>
-              </div>
-            )}
-            <figcaption className="mt-4 px-2 text-center text-sm text-muted sm:mt-5">
-              {showcaseSrc ? (
-                <>
-                  <span className="font-medium text-foreground">2 kg tanks</span> — zoals we ze bij je afspraken
-                  leveren in Amsterdam en omgeving.
-                </>
-              ) : (
-                <>
-                  Tip: zet je productfoto in{" "}
-                  <code className="rounded bg-surface px-1.5 py-0.5 text-xs">public/gasdelivery-showcase.png</code>.
-                </>
-              )}
-            </figcaption>
-          </div>
-        </figure>
+        {showcaseSrc && (
+          <figure className="mt-16 sm:mt-20">
+            <div className="mx-auto grid w-full max-w-4xl items-center gap-8 sm:grid-cols-[1fr_auto]">
+              <Image
+                src={showcaseSrc}
+                alt={showcaseAlt}
+                width={700}
+                height={440}
+                quality={92}
+                className="w-full rounded-2xl object-cover sm:rounded-3xl"
+              />
+              <Image
+                src="/gasdelivery-product.png"
+                alt={productAlt}
+                width={220}
+                height={220}
+                quality={92}
+                className="mx-auto hidden object-contain drop-shadow-xl sm:block"
+              />
+            </div>
+          </figure>
+        )}
       </div>
     </section>
   );

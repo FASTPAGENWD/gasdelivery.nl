@@ -14,10 +14,10 @@ export function FinalCTA() {
           />
           <div className="relative">
             <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-              Klaar om lachgas te bestellen?
+              Lachgas Amsterdam bestellen?
             </h2>
             <p className="mx-auto mt-3 max-w-md text-sm text-muted sm:text-base">
-              WhatsApp ons of bel direct — we zijn 24/7 beschikbaar in Amsterdam en omgeving.
+              WhatsApp ons of bel direct — wij bezorgen lachgas 24/7 in heel Amsterdam en omgeving.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a

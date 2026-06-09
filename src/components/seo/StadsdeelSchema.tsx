@@ -14,9 +14,11 @@ export function StadsdeelSchema({ stadsdeel }: { stadsdeel: StadsdeelContent }) 
     description: stadsdeel.metaDescription,
     url: pageUrl,
     provider: {
-      "@type": "Organization",
+      "@type": "LocalBusiness",
+      "@id": `${SITE_URL}/#organization`,
       name: SITE_NAME,
       url: SITE_URL,
+      telephone: PHONE_E164,
     },
     areaServed: {
       "@type": "Place",
@@ -24,15 +26,35 @@ export function StadsdeelSchema({ stadsdeel }: { stadsdeel: StadsdeelContent }) 
       address: {
         "@type": "PostalAddress",
         addressLocality: stadsdeel.slug === "weesp" ? "Weesp" : "Amsterdam",
+        addressRegion: "Noord-Holland",
         addressCountry: "NL",
       },
     },
-    serviceType: "Lachgas levering",
+    serviceType: "Lachgas levering en bezorging",
+    serviceOutput: "Lachgas tank thuisbezorgd",
     availableChannel: {
       "@type": "ServiceChannel",
       serviceUrl: pageUrl,
       servicePhone: PHONE_E164,
+      availableLanguage: "Dutch",
     },
+    hoursAvailable: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "00:00",
+      closes: "23:59",
+    },
+    offers: {
+      "@type": "Offer",
+      name: `Lachgas bezorging ${stadsdeel.name}`,
+      availability: "https://schema.org/InStock",
+      priceCurrency: "EUR",
+      areaServed: {
+        "@type": "Place",
+        name: stadsdeel.name,
+      },
+    },
+    keywords: stadsdeel.keywords.join(", "),
   };
 
   const breadcrumb = {

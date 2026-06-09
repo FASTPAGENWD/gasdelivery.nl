@@ -6,9 +6,9 @@ import { legalPageMetadata } from "@/lib/seo-metadata";
 import { PHONE_TEL, WHATSAPP_URL } from "@/lib/contact";
 
 export const metadata = legalPageMetadata({
-  title: "Veelgestelde vragen",
+  title: "Veelgestelde vragen over lachgas bestellen Amsterdam",
   description:
-    "FAQ over lachgas bestellen, levering in Amsterdam en omgeving, prijzen, 24/7 bereikbaarheid en contact met Gasdelivery.nl.",
+    "Alles over lachgas bestellen in Amsterdam: bezorging, prijzen, levergebied, stadsdelen, 24/7 bereikbaarheid en contact met Gasdelivery.nl. Antwoord op de meest gestelde vragen.",
   path: "/faq",
 });
 
