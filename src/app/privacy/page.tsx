@@ -1,4 +1,4 @@
-import { LegalShell } from "@/components/LegalShell";
+﻿import { LegalShell } from "@/components/LegalShell";
 import { legalPageMetadata } from "@/lib/seo-metadata";
 
 export const metadata = legalPageMetadata({
@@ -20,7 +20,7 @@ export default function PrivacyPage() {
 
       <h2>Verwerkingsverantwoordelijke</h2>
       <p>
-        Gasdelivery.nl (hierna: “wij”). Voor vragen over privacy:{" "}
+        Gasdelivery.nl (hierna: &quot;wij&quot;). Voor vragen over privacy:{" "}
         <a href="mailto:info@gasdelivery.nl">info@gasdelivery.nl</a> of het telefoonnummer op de
         website.
       </p>
@@ -38,7 +38,7 @@ export default function PrivacyPage() {
       <h2>Doeleinden</h2>
       <ul>
         <li>Het aannemen en uitvoeren van bestellingen en leveringen</li>
-        <li>Contact over je bestelling, planning en bevestiging (zoals beschreven bij “Zo werkt het”)</li>
+        <li>Contact over je bestelling, planning en bevestiging (zoals beschreven bij &quot;Zo werkt het&quot;)</li>
         <li>Beantwoorden van vragen en klantenservice</li>
         <li>Handhaving van onze overeenkomst en wettelijke verplichtingen</li>
       </ul>

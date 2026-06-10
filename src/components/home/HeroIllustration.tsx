@@ -1,6 +1,6 @@
-type Props = { className?: string; "aria-hidden"?: boolean };
+﻿type Props = { className?: string; "aria-hidden"?: boolean };
 
-/** SVG-illustratie (geen extern bestand nodig): cilinder + route, leest als echte ‘afbeelding’ op de pagina. */
+/** SVG-illustratie (geen extern bestand nodig): cilinder + route, leest als echte 'afbeelding' op de pagina. */
 export function HeroIllustration({ className, ...rest }: Props) {
   return (
     <svg
